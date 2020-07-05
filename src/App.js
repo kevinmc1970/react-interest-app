@@ -52,19 +52,19 @@ class App extends React.Component {
       <form onSubmit={this.handleSubmit}>
         <label>
           Balance:
-          <input type="text" name="balance" required onInput={this.myInputHandler}/>
+          <input type="text" name="balance" required pattern="^\d*(\.\d{0,2})?$" onInput={this.myInputHandler}/>
         </label>
         <label>
           LowRate % (0-1000 of balance):
-          <input type="text" name="lowRate" required onInput={this.myInputHandler}/>
+          <input type="text" name="lowRate" required pattern="^\d*(\.\d{0,2})?$" onInput={this.myInputHandler}/>
          </label>
         <label>
           MedRate % (1000-5000 of balance):
-          <input type="text" name="medRate" required onInput={this.myInputHandler}/>
+          <input type="text" name="medRate" required pattern="^\d*(\.\d{0,2})?$" onInput={this.myInputHandler}/>
         </label>
         <label>
           HighRate % (5000+ of balance):
-          <input type="text" name="highRate" required onInput={this.myInputHandler}/>          
+          <input type="text" name="highRate" required pattern="^\d*(\.\d{0,2})?$" onInput={this.myInputHandler}/>          
         </label>
         <input type="submit" value="Calculate Interest" />
       </form>
